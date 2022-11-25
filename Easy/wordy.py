@@ -46,7 +46,7 @@ def get_result(math_expr: str) -> int:
     
     for i in range(1, token_n, 2):
         op_desc = math_expr[i]
-        if op_desc.isdigit():
+        if is_digit(op_desc):
             raise ValueError('syntax error')
             
         op_func = OP_DICT.get(op_desc)
