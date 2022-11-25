@@ -23,7 +23,7 @@ def has_digits(text: str) -> bool:
 def get_expr(question: str) -> str:
     math_expr = (
         question[8:-1]        # Remove the 'What is ' and '?''
-        .replace('by', '')    # Remove 'by' because it will break the for loop in L23
+        .replace('by', '')    # Remove 'by' so that all op. descs. are 1 token only
         .split()
     )
     if not math_expr:
